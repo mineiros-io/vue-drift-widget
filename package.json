@@ -1,0 +1,82 @@
+{
+  "name": "@mineiros/vue-drift-widget",
+  "version": "0.0.1",
+  "description": "A Vue3 plugin for the drift,com widget",
+  "main": "dist/vue-drift-widget.cjs.js",
+  "browser": "dist/vue-drift-widget.esm.js",
+  "unpkg": "dist/vue-drift-widget.global.js",
+  "jsdelivr": "dist/vue-drift-widget.global.js",
+  "module": "dist/vue-drift-widget.esm-bundler.js",
+  "types": "dist/vue-drift-widget.d.ts",
+
+  "scripts": {
+    "dev": "vite serve",
+    "build": "rollup -c",
+    "build:dts": "api-extractor run --local --verbose",
+    "release": "bash scripts/release.sh",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "husky install",
+    "prepublishOnly": "pinst --disable",
+    "postpublish": "pinst --enable",
+    "prettier": "prettier --check \"**/*.{js,jsx,ts,tsx,vue}\"",
+    "prettier:format": "npm run prettier --write",
+    "tsc:check-types": "tsc --noEmit",
+    "lint": "eslint './src/**/*.{js,ts,tsx,vue,md}'",
+    "lint:fix": "npm run lint -- --fix"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mineiros-io/vue-drift-widget.git"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "drift"
+  ],
+  "author": "Mineiros <https://github.com/mineiros-io>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/mineiros-io/vue-drift-widget/issues"
+  },
+  "homepage": "https://github.com/mineiros-io/vue-drift-widget#readme",
+  "peerDependecies": {
+    "vue": "^3.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@microsoft/api-extractor": "^7.12.0",
+    "@rollup/plugin-alias": "^3.1.1",
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-node-resolve": "^11.0.0",
+    "@rollup/plugin-replace": "^2.3.4",
+    "@types/jest": "^26.0.19",
+    "@typescript-eslint/eslint-plugin": "^4.11.0",
+    "@typescript-eslint/parser": "^4.12.0",
+    "chalk": "^4.1.0",
+    "eslint": "^7.16.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-prettier": "^3.3.0",
+    "husky": "^5.0.6",
+    "lint-staged": "^10.5.3",
+    "pinst": "^2.1.1",
+    "prettier": "^2.2.1",
+    "rollup": "^2.36.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.29.0",
+    "typescript": "^4.1.0",
+    "vite": "v2.0.0-beta.10",
+    "vue": "^3.0.0",
+    "vue-jest": "^3.0.7"
+  }
+}
