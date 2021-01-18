@@ -44,7 +44,7 @@ export { initWidget, loadScript }
  * Check if the Drift script is in the document
  */
 const hasScript = (): boolean => {
-  if (!window.drift) return false
+  if (window.drift) return true
 
   return Array.from(document.getElementsByTagName('script')).some((script) =>
     script.innerHTML.includes('js.driftt.com'),
