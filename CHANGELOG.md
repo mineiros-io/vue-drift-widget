@@ -9,5 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- dyamically load drift dependencies and initalize widget
+- Simple example
+- Programmatic example
+- Dyamically load drift dependencies and initalize widget
 - Initial repository structure
