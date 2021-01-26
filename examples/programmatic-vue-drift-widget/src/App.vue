@@ -4,14 +4,13 @@
   <div>
     drift configuration {{ driftConfig }}
   </div>
-  <button @click="loadScript()" :disable="!driftConfig?.loadScript">Load Drift Script</button>
-  <button @click="initDrift()" :disabled="!driftConfig?.loadScript || driftConfig.enabled">Initalize Drift</button>
+  <button @click="initDrift()" :disabled="driftConfig?.enabled">Initalize Drift</button>
 </template>
 
 <script lang="ts">
 import { defineComponent, inject} from 'vue'
 import HelloWorld from './components/HelloWorld.vue'
-import { DriftWidgetPluginConfig, useDriftConfig } from '/drift/index'
+import { useDriftPluginConfig } from '/drift/index'
 
 export default defineComponent({
   name: 'App',
@@ -19,21 +18,17 @@ export default defineComponent({
     HelloWorld
   },
   setup() {
-    // const driftConfig = inject<DriftWidgetPluginConfig>('driftConfig')
-    const driftConfig = useDriftConfig()
 
-    const loadScript = (): void  => {
-      if(driftConfig) {
-        driftConfig.loadScript = true
-      }
-    }
+    const driftConfig = useDriftPluginConfig()
+
     const initDrift = ():void => {
+
       if(driftConfig) {
         driftConfig.enabled = true
       }
     }
 
-    return { loadScript, driftConfig, initDrift }
+    return { driftConfig, initDrift }
   }
 })
 </script>
