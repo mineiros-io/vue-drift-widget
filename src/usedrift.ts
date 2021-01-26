@@ -1,15 +1,11 @@
 import { inject } from 'vue'
 import { Drift } from './drift'
-import { DriftWidgetPluginConfig, DRIFT_CONFIG } from './types'
+import { DriftPluginConfig, DRIFT_PLUGIN_CONFIG } from './types'
 
-const useDriftAPI = (): Drift | undefined => {
-  const drift = window.drift
-
-  return drift
+export const useDrift = (): Drift | undefined => {
+  return window.drift
 }
 
-const useDriftConfig = (): DriftWidgetPluginConfig | undefined => {
-  return inject<DriftWidgetPluginConfig>(DRIFT_CONFIG)
+export const useDriftPluginConfig = (): DriftPluginConfig | undefined => {
+  return inject<DriftPluginConfig>(DRIFT_PLUGIN_CONFIG)
 }
-
-export { useDriftAPI, useDriftConfig }

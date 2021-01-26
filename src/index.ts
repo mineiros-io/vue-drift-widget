@@ -1,6 +1,6 @@
 export * from './types'
-import useDriftWidgetPlugin from './install'
-export { loadScript, initWidget } from './utils'
-export { useDriftAPI, useDriftConfig } from './usedrift'
 
-export default useDriftWidgetPlugin
+import createDriftPlugin from './install'
+export { useDrift, useDriftPluginConfig } from './usedrift'
+
+export default createDriftPlugin
