@@ -11,7 +11,7 @@
 <script lang="ts">
 import { defineComponent, inject} from 'vue'
 import HelloWorld from './components/HelloWorld.vue'
-import { DriftWidgetPluginConfig, useDriftConfig } from '/drift/index'
+import { useDriftPluginConfig } from '/drift/index'
 
 export default defineComponent({
   name: 'App',
@@ -20,7 +20,7 @@ export default defineComponent({
   },
   setup() {
     // const driftConfig = inject<DriftWidgetPluginConfig>('driftConfig')
-    const driftConfig = useDriftConfig()
+    const driftConfig = useDriftPluginConfig()
 
     const loadScript = (): void  => {
       if(driftConfig) {

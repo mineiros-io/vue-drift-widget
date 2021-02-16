@@ -4,7 +4,7 @@
 </template>
 
 <script lang="ts">
-import { useDriftAPI } from '/drift/index'
+import { useDrift } from '/drift/index'
 import { defineComponent} from 'vue'
 import HelloWorld from './components/HelloWorld.vue'
 
@@ -14,7 +14,7 @@ export default defineComponent({
     HelloWorld
   },
   setup() {
-    const drift  = useDriftAPI()
+    const drift  = useDrift()
     if(drift) {
 
       drift.on('ready', (api, payload) => {
