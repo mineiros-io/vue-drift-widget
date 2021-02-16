@@ -1,4 +1,3 @@
-// Drift API types
 declare class Drift {
   invoked: boolean
   SNIPPET_VERSION: string

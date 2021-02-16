@@ -124,15 +124,7 @@ declare class Drift {
   on(
     event: 'conversation:playbookDismissed',
     callback: (payload: {
-<<<<<<< HEAD
-<<<<<<< HEAD
       conversationId: number
-=======
-      converationId: number
->>>>>>> 9ce9c20 (feat: implement the drift widget and its api)
-=======
-      conversationId: number
->>>>>>> b7d7520 (feat: implement the drift widget and its api)
       messageId: number
       playbookId?: number
       interactionId?: number
@@ -182,8 +174,6 @@ declare class Drift {
   on(
     event: 'message',
     callback: (payload: {
-<<<<<<< HEAD
-<<<<<<< HEAD
       conversationId: number
       inboxId: number
       teamMember: {
@@ -193,28 +183,6 @@ declare class Drift {
       playbookId?: number
       interactionId?: number
       campaignId?: number
-=======
-      conversationid: number
-      inboxid: number
-      teammember: {
-        id: number
-        name: string
-      }
-      playbookid?: number
-      interactionid?: number
-      campaignid?: number
->>>>>>> 9ce9c20 (feat: implement the drift widget and its api)
-=======
-      conversationId: number
-      inboxId: number
-      teamMember: {
-        id: number
-        name: string
-      }
-      playbookId?: number
-      interactionId?: number
-      campaignId?: number
->>>>>>> b7d7520 (feat: implement the drift widget and its api)
     }) => void,
   ): void
   // https://devdocs.drift.com/docs/drift-events#user-sent-a-message

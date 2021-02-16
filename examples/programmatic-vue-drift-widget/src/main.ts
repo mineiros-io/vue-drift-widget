@@ -8,7 +8,6 @@ createApp(App)
     createDriftPlugin({
       widgetId: import.meta.env.VITE_DRIFT_WIDGET_ID as string,
       enabled: false,
-      loadScript: false,
     }),
   )
   .mount('#app')
