@@ -7,7 +7,9 @@ import { resolve } from 'path'
  */
 export default {
   plugins: [vue()],
-  alias: {
-    '/drift/': resolve(__dirname, '../../src'),
+  resolve: {
+    alias: {
+      '@mineirosio/vue-drift-widget': resolve(__dirname, '../../src'),
+    },
   },
 }

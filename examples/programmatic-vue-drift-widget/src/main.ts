@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import './index.css'
-import { createDriftPlugin } from '/drift/'
+import { createDriftPlugin } from '@mineirosio/vue-drift-widget'
 
 createApp(App)
   .use(

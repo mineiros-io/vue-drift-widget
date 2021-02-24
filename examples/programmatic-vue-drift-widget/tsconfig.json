@@ -6,11 +6,12 @@
     "strict": true,
     "jsx": "preserve",
     "sourceMap": true,
+    "skipLibCheck": true,
     "lib": ["esnext", "dom"],
     "plugins": [{ "name": "@vuedx/typescript-plugin-vue" }],
     "baseUrl": ".",
     "paths": {
-      "/drift/*": ["./../../src/*.ts"]
+      "@mineirosio/vue-drift-widget": ["./../../src/index.ts"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]

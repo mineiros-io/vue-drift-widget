@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts">
-import { useDrift } from '/drift/index'
+import { useDrift } from '@mineirosio/vue-drift-widget'
 import { defineComponent} from 'vue'
 
 export default defineComponent({

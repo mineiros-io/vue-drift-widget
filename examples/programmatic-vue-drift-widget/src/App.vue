@@ -7,8 +7,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, inject} from 'vue'
-import { useDriftPluginConfig } from '/drift/index'
+import { defineComponent } from 'vue'
+import { useDriftPluginConfig } from '@mineirosio/vue-drift-widget'
 
 export default defineComponent({
   name: 'App',
