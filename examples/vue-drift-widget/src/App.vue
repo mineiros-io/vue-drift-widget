@@ -1,27 +1,27 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
+  <div>
+    drift configuration {{ driftConfig }}
+  </div>
+  <button @click="initDrift()" :disabled="driftConfig.enabled">Initalize Drift</button>
 </template>
 
 <script lang="ts">
-import { useDrift } from '@mineirosio/vue-drift-widget'
-import { defineComponent} from 'vue'
+import { defineComponent } from 'vue'
+import { useDriftPluginConfig } from '@mineirosio/vue-drift-widget'
 
 export default defineComponent({
   name: 'App',
   setup() {
-    const drift  = useDrift()
-    if(drift) {
+    const driftConfig = useDriftPluginConfig()
 
-      drift.on('ready', (api, payload) => {
-        api.openChat();
-        console.log(api);
-        console.log(payload);
-      })
-
-      drift.on('message', (data) => {
-        console.log(data);
-      })
+    const initDrift = (): void => {
+      if(driftConfig) {
+        driftConfig.enabled = true
+      }
     }
+
+    return { driftConfig, initDrift }
   }
 })
 </script>
