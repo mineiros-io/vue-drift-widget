@@ -3,24 +3,23 @@
   "compilerOptions": {
     "outDir": "dist",
     "sourceMap": false,
-
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
     "allowJs": false,
-
     "strictNullChecks": true,
     "noImplicitAny": true,
     "noImplicitThis": true,
     "noImplicitReturns": true,
     "strict": true,
-
+    "importHelpers": true,
+    "isolatedModules": true,
     "experimentalDecorators": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "removeComments": false,
     "jsx": "preserve",
     "lib": ["esnext", "dom"],
-    "types": ["jest", "node"]
+    "types": []
   }
 }

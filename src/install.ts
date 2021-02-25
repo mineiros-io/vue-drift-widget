@@ -19,4 +19,4 @@ const createDriftPlugin = (config: DriftPluginConfig): Plugin => {
   }
 }
 
-export default createDriftPlugin
+export { createDriftPlugin }

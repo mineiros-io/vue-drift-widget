@@ -46,10 +46,9 @@
     "url": "https://github.com/mineiros-io/vue-drift-widget/issues"
   },
   "homepage": "https://github.com/mineiros-io/vue-drift-widget#readme",
-  "peerDependecies": {
+  "dependencies": {
     "vue": "^3.0.0"
   },
-  "dependencies": {},
   "peerDependencies": {
     "vue": "^3.0.0"
   },
@@ -77,6 +76,7 @@
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.29.0",
     "typescript": "^4.1.0",
+    "vue": "^3.0.0",
     "vue-jest": "^3.0.7"
   }
 }

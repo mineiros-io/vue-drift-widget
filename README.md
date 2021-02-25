@@ -1,11 +1,18 @@
+[<img src="https://raw.githubusercontent.com/mineiros-io/brand/3bffd30e8bdbbde32c143e2650b2faa55f1df3ea/mineiros-primary-logo.svg" width="400"/>][homepage]
+
 # vue-drift-widget
 
-A cheap (~ 3kb) [https://vuejs.org/](Vue 3) plugin for the [https://www.drift.com/](drift.com) widget.
+A cheap (~ 3kb) [Vue 3] plugin for the [drift.com] widget.
 
 ## Features
 
-- **✅ Strongly Typed API:** Full typescript support and strongly typed drift API
+- **✅ Strongly-typed API:** Full typescript support and strongly typed drift API
 - **✅ Tiny:** < 3kb minified & compressed>
+
+## Requirements
+
+- **Vue.js** >= 3.0.0
+- **Drift.com account** to receive a drift widget id.
 
 ## Installation
 
@@ -59,7 +66,7 @@ createApp(App)
   .use(
     createDriftPlugin({
       widgetId: driftId,
-      enabled: false // Don't enable the widget per default
+      enabled: false, // Don't enable the widget per default
     }),
   )
   .mount('#app')
@@ -96,12 +103,10 @@ export default defineComponent({
 </script>
 ```
 
-For full examples please find [https://github.com/mineiros-io/vue-drift-widget/tree/main/examples](/examples).
-
 ### Interact with Drifts API
 
 This plugin currently supports most of the API endpoints provided by the widget.
-For further information on how to interact with the widget, please read the [https://devdocs.drift.com/docs/widget-start](documentation).
+For further information on how to interact with the widget, please read the [https://devdocs.drift.com/docs/widget-start][drift-docs].
 
 ```ts
 <template>
@@ -132,3 +137,15 @@ export default defineComponent({
 })
 </script>
 ```
+
+### Examples
+
+For a fully functional example please find [example]
+
+<!-- References -->
+
+[homepage]: https://mineiros.io/?ref=terraform-aws-iam-role
+[example]: https://github.com/mineiros-io/vue-drift-widget/tree/main/examples/vue-drift-widget
+[vue 3]: https://vuejs.org
+[drift.com]: https://www.drift.com
+[drift-docs]: https://devdocs.drift.com/docs/widget-start
