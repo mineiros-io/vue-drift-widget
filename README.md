@@ -2,7 +2,7 @@
 
 # vue-drift-widget
 
-A cheap (~ 3kb) [https://vuejs.org/](Vue 3) plugin for the [https://www.drift.com/](drift.com) widget.
+A cheap (~ 3kb) [Vue 3] plugin for the [drift.com] widget.
 
 ## Features
 
@@ -106,7 +106,7 @@ export default defineComponent({
 ### Interact with Drifts API
 
 This plugin currently supports most of the API endpoints provided by the widget.
-For further information on how to interact with the widget, please read the [https://devdocs.drift.com/docs/widget-start](documentation).
+For further information on how to interact with the widget, please read the [https://devdocs.drift.com/docs/widget-start][drift-docs].
 
 ```ts
 <template>
@@ -140,5 +140,12 @@ export default defineComponent({
 
 ### Examples
 
-For a fully functional example please find
-[https://github.com/mineiros-io/vue-drift-widget/tree/main/examples/vue-drift-widget](/examples/vue-drift-widget).
+For a fully functional example please find [example]
+
+<!-- References -->
+
+[homepage]: https://mineiros.io/?ref=terraform-aws-iam-role
+[example]: https://github.com/mineiros-io/vue-drift-widget/tree/main/examples/vue-drift-widget
+[vue 3]: https://vuejs.org
+[drift.com]: https://www.drift.com
+[drift-docs]: https://devdocs.drift.com/docs/widget-start
