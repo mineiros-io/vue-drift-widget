@@ -5,7 +5,8 @@ on:
     types: [published]
 
 jobs:
-  build:
+  publish:
+    name: Build and publish to NPM
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -15,7 +16,6 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm install
       - run: npm run build
-      - run: npm run build:dts
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

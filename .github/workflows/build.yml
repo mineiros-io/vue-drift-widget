@@ -1,9 +1,10 @@
-name: Build
+name: CI Pipeline
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
   build:
+    name: Install dependencies and build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

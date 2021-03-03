@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.3] - 2020-03-03
+
+### Fixed
+
+- Only trigger GitHub actions on push
+- Rename Build to CI Pipeline
+- Drift types shouldn't be a global type file since it's ignored by tsc
+
+### Fixed
+
+- Remove @microsoft/api-extractor
+
 ## [0.0.2] - 2020-03-03
 
 ### Added
@@ -21,6 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Dynamically load drift dependencies and initialize the Drift Widget
 - Initial repository structure
 
-[Unreleased]: https://github.com/mineiros-io/vue-drift-widget/compare/v0.0.2...HEAD
+[unreleased]: https://github.com/mineiros-io/vue-drift-widget/compare/v0.0.3...HEAD
+[0.0.3]: https://github.com/mineiros-io/vue-drift-widget/compare/v0.0.2...v0.0.3
 [0.0.2]: https://github.com/mineiros-io/vue-drift-widget/compare/v0.0.1...v0.0.2
 [0.0.1]: https://github.com/mineiros-io/vue-drift-widget/releases/tag/v0.0.1
