@@ -1,6 +1,6 @@
 {
   "name": "@mineiros/vue-drift-widget",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Vue3 plugin for the drift.com widget",
   "main": "dist/vue-drift-widget.cjs.js",
   "browser": "dist/vue-drift-widget.esm.js",
@@ -14,14 +14,15 @@
     "build:dts": "api-extractor run --local --verbose",
     "release": "bash scripts/release.sh",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "husky install",
+    "_postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable",
     "prettier": "prettier --check \"**/*.{js,jsx,ts,tsx,vue}\"",
     "prettier:format": "npm run prettier --write",
     "tsc:check-types": "tsc --noEmit",
     "lint": "eslint './src/**/*.{js,jsx,ts,tsx,vue,md}'",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "commit": "git-cz"
   },
   "lint-staged": {
     "*.js?(x)": [
@@ -30,6 +31,11 @@
     "*.ts?(x)": [
       "prettier --parser=typescript --write"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/prompt"
+    }
   },
   "repository": {
     "type": "git",
@@ -55,6 +61,7 @@
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
+    "@commitlint/prompt": "^11.0.0",
     "@microsoft/api-extractor": "^7.13.0",
     "@rollup/plugin-alias": "^3.1.1",
     "@rollup/plugin-commonjs": "^16.0.0",
@@ -64,6 +71,7 @@
     "@typescript-eslint/eslint-plugin": "^4.14.0",
     "@typescript-eslint/parser": "^4.14.0",
     "chalk": "^4.1.0",
+    "commitizen": "^4.2.3",
     "eslint": "^7.18.0",
     "eslint-config-prettier": "^7.2.0",
     "eslint-config-standard": "^16.0.2",

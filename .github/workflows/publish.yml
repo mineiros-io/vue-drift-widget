@@ -1,6 +1,8 @@
-name: Build
+name: NPM Publish
 
-on: [push, pull_request]
+on:
+  release:
+    types: [published]
 
 jobs:
   build:
@@ -12,4 +14,8 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - run: npm install
-      - run: npm run-script build
+      - run: npm run build
+      - run: npm run build:dts
+      - run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
