@@ -11,11 +11,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- drift types shouldn't be a global type file since it's ignored by tsc
+- Only trigger GitHub actions on push
+- Rename Build to CI Pipeline
+- Drift types shouldn't be a global type file since it's ignored by tsc
 
 ### Fixed
 
-- remove @microsoft/api-extractor
+- Remove @microsoft/api-extractor
 
 ## [0.0.2] - 2020-03-03
 
