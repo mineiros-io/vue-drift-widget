@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.4] - 2020-03-04
+
+### Added
+
+- Set `isolatedmodules` to `false` in .tsconfig to guarantee a seamless build
+- Optimize various tsconfig settings
+- Only add relevant files to production build.
+- Add build page to README.md
+
 ## [0.0.3] - 2020-03-03
 
 ### Fixed
@@ -15,7 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Rename Build to CI Pipeline
 - Drift types shouldn't be a global type file since it's ignored by tsc
 
-### Fixed
+### Removed
 
 - Remove @microsoft/api-extractor
 
@@ -33,7 +42,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Dynamically load drift dependencies and initialize the Drift Widget
 - Initial repository structure
 
-[unreleased]: https://github.com/mineiros-io/vue-drift-widget/compare/v0.0.3...HEAD
+[unreleased]: https://github.com/mineiros-io/vue-drift-widget/compare/v0.0.4...HEAD
+[0.0.4]: https://github.com/mineiros-io/vue-drift-widget/compare/v0.0.3...v0.0.4
 [0.0.3]: https://github.com/mineiros-io/vue-drift-widget/compare/v0.0.2...v0.0.3
 [0.0.2]: https://github.com/mineiros-io/vue-drift-widget/compare/v0.0.1...v0.0.2
 [0.0.1]: https://github.com/mineiros-io/vue-drift-widget/releases/tag/v0.0.1
