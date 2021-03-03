@@ -8,6 +8,12 @@
   "jsdelivr": "dist/vue-drift-widget.global.js",
   "module": "dist/vue-drift-widget.esm-bundler.js",
   "types": "dist/vue-drift-widget.d.ts",
+  "files": [
+    "dist/*.js",
+    "dist/vue-drift-widget.d.ts",
+    "LICENSE",
+    "README.md"
+  ],
   "scripts": {
     "dev": "vite serve",
     "build": "rollup -c",
