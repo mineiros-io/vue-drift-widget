@@ -1,6 +1,6 @@
 {
   "name": "@mineiros/vue-drift-widget",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Vue3 plugin for the drift.com widget",
   "main": "dist/vue-drift-widget.cjs.js",
   "browser": "dist/vue-drift-widget.esm.js",
