@@ -1,4 +1,5 @@
 [<img src="https://raw.githubusercontent.com/mineiros-io/brand/3bffd30e8bdbbde32c143e2650b2faa55f1df3ea/mineiros-primary-logo.svg" width="400"/>][homepage]
+[![CI Pipeline](https://github.com/mineiros-io/vue-drift-widget/actions/workflows/build.yml/badge.svg)](https://github.com/mineiros-io/vue-drift-widget/actions/workflows/build.yml)
 
 # vue-drift-widget
 
