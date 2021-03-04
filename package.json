@@ -1,6 +1,6 @@
 {
   "name": "@mineiros/vue-drift-widget",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A Vue3 plugin for the drift.com widget",
   "main": "dist/vue-drift-widget.cjs.js",
   "browser": "dist/vue-drift-widget.esm.js",
@@ -8,6 +8,7 @@
   "jsdelivr": "dist/vue-drift-widget.global.js",
   "module": "dist/vue-drift-widget.esm-bundler.js",
   "types": "dist/vue-drift-widget.d.ts",
+  "sideEffects": false,
   "files": [
     "dist/*.js",
     "dist/vue-drift-widget.d.ts",
@@ -17,13 +18,11 @@
   "scripts": {
     "dev": "vite serve",
     "build": "rollup -c",
-    "release": "bash scripts/release.sh",
+    "build:dts": "api-extractor run --local --verbose",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "husky install",
+    "_postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable",
-    "prettier": "prettier --check \"**/*.{js,jsx,ts,tsx,vue}\"",
-    "prettier:format": "npm run prettier --write",
     "tsc:check-types": "tsc --noEmit",
     "lint": "eslint './src/**/*.{js,jsx,ts,tsx,vue,md}'",
     "lint:fix": "npm run lint -- --fix",
@@ -31,10 +30,10 @@
   },
   "lint-staged": {
     "*.js?(x)": [
-      "prettier --write"
+      "eslint --fix"
     ],
     "*.ts?(x)": [
-      "prettier --parser=typescript --write"
+      "eslint --fix"
     ]
   },
   "config": {
@@ -51,7 +50,7 @@
     "vue3",
     "drift"
   ],
-  "author": "Mineiros <https://github.com/mineiros-io>",
+  "author": "Mineiros GmbH <https://github.com/mineiros-io>",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/mineiros-io/vue-drift-widget/issues"
@@ -67,6 +66,7 @@
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "@commitlint/prompt": "^11.0.0",
+    "@microsoft/api-extractor": "^7.13.2",
     "@rollup/plugin-alias": "^3.1.1",
     "@rollup/plugin-commonjs": "^16.0.0",
     "@rollup/plugin-node-resolve": "^11.1.0",
