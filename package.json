@@ -1,6 +1,6 @@
 {
   "name": "@mineiros/vue-drift-widget",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A Vue3 plugin for the drift.com widget",
   "main": "dist/vue-drift-widget.cjs.js",
   "browser": "dist/vue-drift-widget.esm.js",
@@ -8,6 +8,12 @@
   "jsdelivr": "dist/vue-drift-widget.global.js",
   "module": "dist/vue-drift-widget.esm-bundler.js",
   "types": "dist/vue-drift-widget.d.ts",
+  "files": [
+    "dist/*.js",
+    "dist/vue-drift-widget.d.ts",
+    "LICENSE",
+    "README.md"
+  ],
   "scripts": {
     "dev": "vite serve",
     "build": "rollup -c",
