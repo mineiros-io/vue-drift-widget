@@ -25,15 +25,13 @@
     "postpublish": "pinst --enable",
     "tsc:check-types": "tsc --noEmit",
     "lint": "eslint './src/**/*.{js,jsx,ts,tsx,vue,md}'",
-    "lint:fix": "npm run lint -- --fix",
-    "commit": "git-cz"
+    "lint:fix": "yarn lint --fix",
+    "commit": "git-cz",
+    "prepare": "husky install"
   },
   "lint-staged": {
-    "*.js?(x)": [
-      "eslint --fix"
-    ],
-    "*.ts?(x)": [
-      "eslint --fix"
+    "*.{js,jsx,ts,tsx,vue}": [
+      "npx eslint --fix"
     ]
   },
   "config": {
