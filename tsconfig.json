@@ -1,31 +1,22 @@
 {
   "include": ["src/**/*.ts", "__tests__/**/*.ts"],
   "compilerOptions": {
-    "baseUrl": ".",
-    "rootDir": ".",
-    "outDir": "dist",
-    "sourceMap": false,
-    "noEmit": true,
-
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
-    "allowJs": false,
-
-    "noUnusedLocals": true,
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "esModuleInterop": true,
+    "strict": true,
     "strictNullChecks": true,
     "noImplicitAny": true,
     "noImplicitThis": true,
     "noImplicitReturns": true,
-    "strict": true,
-    "isolatedModules": false,
-    "allowSyntheticDefaultImports": true,
-    "experimentalDecorators": true,
+    "strictFunctionTypes": true,
     "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "removeComments": false,
+    "rootDir": ".",
+    "baseUrl": ".",
     "jsx": "preserve",
-    "lib": ["esnext", "dom"],
-    "types": ["node"]
+    "skipLibCheck": true,
+    "noUnusedLocals": true
   }
 }
