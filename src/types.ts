@@ -1,4 +1,5 @@
 import { App } from 'vue'
+import { Drift } from './drift'
 
 export const DRIFT_PLUGIN_CONFIG = 'driftPluginConfig'
 
@@ -20,4 +21,10 @@ export interface DriftPluginConfig {
    * @default true
    */
   enabled?: boolean
+}
+
+declare global {
+  interface Window {
+    drift?: Drift
+  }
 }
