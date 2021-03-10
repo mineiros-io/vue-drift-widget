@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.7] - 2020-03-10
+
+### Changed
+
+- Set typescript target to 2017 to ensure compatibility with all Vue 3 versions
+
 ## [0.0.6] - 2020-03-04
 
 - Move `window.d.ts` to `types.ts`
@@ -54,7 +60,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Dynamically load drift dependencies and initialize the Drift Widget
 - Initial repository structure
 
-[unreleased]: https://github.com/mineiros-io/vue-drift-widget/compare/v0.0.6...HEAD
+[unreleased]: https://github.com/mineiros-io/vue-drift-widget/compare/v0.0.7...HEAD
+[0.0.7]: https://github.com/mineiros-io/vue-drift-widget/compare/v0.0.6...v0.0.7
 [0.0.6]: https://github.com/mineiros-io/vue-drift-widget/compare/v0.0.5...v0.0.6
 [0.0.5]: https://github.com/mineiros-io/vue-drift-widget/compare/v0.0.4...v0.0.5
 [0.0.4]: https://github.com/mineiros-io/vue-drift-widget/compare/v0.0.3...v0.0.4
