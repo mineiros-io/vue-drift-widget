@@ -1,7 +1,7 @@
 {
   "include": ["src/**/*.ts", "__tests__/**/*.ts"],
   "compilerOptions": {
-    "target": "esnext",
+    "target": "es2017",
     "module": "esnext",
     "moduleResolution": "node",
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
